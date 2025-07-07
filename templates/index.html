@@ -1,59 +1,35 @@
 {% extends "base.html" %}
 
-{% block title %}หน้าแรก{% endblock title %}
+{% block title %}หน้าแรก - ธีมเกษตรกร{% endblock title %}
 
 {% block content %}
-<div class="position-relative py-5">
-    <!-- ลูกโลกหมุนมุมซ้ายบน -->
-    <div style="position: absolute; top: 20px; left: 20px; z-index: 10;">
-        <div class="globe-spin">
-            <svg width="60" height="60" viewBox="0 0 60 60">
-                <circle cx="30" cy="30" r="28" fill="#232526" stroke="#08d9d6" stroke-width="3"/>
-                <ellipse cx="30" cy="30" rx="24" ry="10" fill="none" stroke="#ff2e63" stroke-width="2"/>
-                <ellipse cx="30" cy="30" rx="10" ry="24" fill="none" stroke="#ff2e63" stroke-width="2"/>
-                <ellipse cx="30" cy="30" rx="18" ry="18" fill="none" stroke="#08d9d6" stroke-width="1.5"/>
-            </svg>
-        </div>
-    </div>
-<div class="container-fluid py-5" style="background: rgba(57, 57, 57, 0.85); min-height: 100vh;">
+<div class="container py-5">
     <div class="row justify-content-center">
-        <div class="col-md-8 col-lg-6">
-            <div class="card shadow-lg border-0" style="background: rgba(30,30,30,0.85);">
-                <div class="card-header bg-dark text-white text-center border-0">
-                    <h2 class="mb-0" style="letter-spacing:0.1em; color:#ff2e63; text-shadow:0 0 10px #ff2e63,0 0 40px #232526;">แนะนำตัว</h2>
+        <div class="col-md-8 col-lg-7">
+            <div class="card shadow-lg border-0 farmer-theme-card">
+                <div class="card-header bg-success text-white text-center border-0">
+                    <h2 class="mb-0" style="letter-spacing:0.1em; color:#fffbe7; text-shadow:0 0 10px #388e3c,0 0 40px #232526;">
+                        แนะนำตัว <span style="font-size:1.5em; margin-left:10px;">🌱</span>
+                    </h2>
                 </div>
                 <div class="card-body text-center">
-                    <p class="fs-4 mb-3" style="color:#08d9d6; text-shadow:0 0 5px #08d9d6;">ชื่อ: Pongphisut Buahom</p>
-                    <p class="fs-4 mb-3" style="color:#08d9d6; text-shadow:0 0 5px #08d9d6;">เลขรหัส: 6712732111</p>
-                    <p class="fs-4 mb-3" style="color:#08d9d6; text-shadow:0 0 5px #08d9d6">คณะ: ศิลปศาสตร์และวิทยาศาสตร์</p>
-                    <p class="fs-4 mb-3" style="color:#08d9d6; text-shadow:0 0 5px #08d9d6">สาขา: วิทยาการคอมพิวเตอร์</p>
-                    <p class="fs-4 mb-3" style="color:#08d9d6; text-shadow:0 0 5px #08d9d6">ชั้นปี: 2</p>
+                    <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/agriculture-1868570_1280.jpg" alt="เกษตรกร" class="img-fluid rounded mb-3" style="max-height:220px; object-fit:cover; border:4px solid #a5d6a7;">
+                    <p class="fs-4 mb-3" style="color:#388e3c; font-weight:bold;">ชื่อ: Mr.Nattapon Boonnara</p>
+                    <p class="fs-4 mb-3" style="color:#6d4c22;">เลขรหัส: 6712732105</p>
+                    <p class="fs-4 mb-3" style="color:#388e3c;">คณะ: ศิลปศาสตร์และวิทยาศาสตร์</p>
+                    <p class="fs-4 mb-3" style="color:#6d4c22;">สาขา: วิทยาการคอมพิวเตอร์</p>
+                    <p class="fs-4 mb-3" style="color:#388e3c;">ชั้นปี: 2</p>
+                    <p class="fs-6 mb-0" style="color:#6d4c22;">"เติบโตไปกับธรรมชาติและเทคโนโลยี"</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <style>
-/* ลูกโลกหมุน */
-.globe-spin {
-    animation: globe-rotate 3s linear infinite;
-    filter: drop-shadow(0 0 8px #08d9d6);
-}
-@keyframes globe-rotate {
-    0% { transform: rotate(0deg);}
-    100% { transform: rotate(360deg);}
-}
-/* ฟอนต์และแสงแบบ dystopian */
-.card-header h3 {
-    animation: flicker1984 2s infinite alternate;
-}
-@keyframes flicker1984 {
-    0% { opacity: 1; text-shadow: 0 0 10px #ff2e63, 0 0 40px #232526; }
-    50% { opacity: 0.85; text-shadow: 0 0 20px #ff2e63, 0 0 60px #232526; }
-    100% { opacity: 1; text-shadow: 0 0 10px #ff2e63, 0 0 40px #232526; }
-}
-.card {
-    box-shadow: 0 0 20px #232526, 0 0 40px #ff2e63 inset;
+.farmer-theme-card {
+    background: linear-gradient(135deg, #e8f5e9 60%, #fffde7 100%);
+    border: 2px solid #a5d6a7;
+    box-shadow: 0 4px 24px 0 rgba(56, 142, 60, 0.15);
 }
 </style>
 {% endblock content %}
