@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 # Application
 =======
-# appside
->>>>>>> 65ca398542799d0d8da09625a96415a86981fb42
+=======
+# MySuperWeb
+>>>>>>> 302888054e088861ce88ac6c5e049518379e6b8e
