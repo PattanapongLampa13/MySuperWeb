@@ -1,35 +1,45 @@
 {% extends "base.html" %}
 
-{% block title %}หน้าแรก - เกษตรกร{% endblock title %}
+{% load static %}
+
+
+{% block title %}หน้าแรก - ตะวันตก{% endblock title %}
 
 {% block content %}
-<div class="container py-5">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Special+Elite&display=swap" rel="stylesheet">
+<div class="container py-5" style="font-family: 'Special Elite', 'Staatliches', cursive, serif; border-radius: 18px; box-shadow: 0 8px 32px 0 rgba(101, 67, 33, 0.25);">
     <div class="row justify-content-center">
         <div class="col-md-8 col-lg-7">
-            <div class="card shadow-lg border-0 farmer-theme-card">
-                <div class="card-header bg-success text-white text-center border-0">
-                    <h2 class="mb-0" style="letter-spacing:0.1em; color:#fffbe7; text-shadow:0 0 10px #388e3c,0 0 40px #232526;">
-                        แนะนำตัว <span style="font-size:1.5em; margin-left:10px;">🌱</span>
+            <div class="card shadow-lg border-0 western-theme-card">
+                <div class="card-header bg-western text-white text-center border-0">
+                    <h2 class="mb-0" style="letter-spacing:0.12em; color:#fffbe7; text-shadow:0 0 10px #6d4c22,0 0 40px #232526; font-family: 'Staatliches', 'Special Elite', cursive; font-size:2.2em;">
+                        <span style="font-size:1.2em; margin-right:10px;">🤠</span> Howdy Partner!
                     </h2>
                 </div>
                 <div class="card-body text-center">
-                    <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/agriculture-1868570_1280.jpg" alt="เกษตรกร" class="img-fluid rounded mb-3" style="max-height:220px; object-fit:cover; border:4px solid #a5d6a7;">
-                    <p class="fs-4 mb-3" style="color:#388e3c; font-weight:bold;">ชื่อ: Mr.Nattapon Boonnara</p>
-                    <p class="fs-4 mb-3" style="color:#6d4c22;">เลขรหัส: 6712732105</p>
-                    <p class="fs-4 mb-3" style="color:#388e3c;">คณะ: ศิลปศาสตร์และวิทยาศาสตร์</p>
-                    <p class="fs-4 mb-3" style="color:#6d4c22;">สาขา: วิทยาการคอมพิวเตอร์</p>
-                    <p class="fs-4 mb-3" style="color:#388e3c;">ชั้นปี: 2</p>
-                    <p class="fs-6 mb-0" style="color:#6d4c22;">"เติบโตไปกับธรรมชาติและเทคโนโลยี"</p>
+                    <img src="{% static 'assets/img/ดาวน์โหลด.jpg' %}" alt="นายอำเภอ" class="img-fluid rounded mb-3" style="max-height:220px; object-fit:cover; border:4px solid #a67c52; box-shadow:0 0 16px #6d4c22;">
+                    <p class="fs-4 mb-3" style="color:#6d4c22; font-weight:bold; font-family: 'Staatliches', 'Special Elite', cursive;">ชื่อ: Patthanapong Lampa</p>
+                    <p class="fs-4 mb-3" style="color:#a67c52;">เลขรหัส: 6712732113</p>
+                    <p class="fs-4 mb-3" style="color:#6d4c22;">คณะ: ศิลปศาสตร์และวิทยาศาสตร์</p>
+                    <p class="fs-4 mb-3" style="color:#a67c52;">สาขา: วิทยาการคอมพิวเตอร์</p>
+                    <p class="fs-4 mb-3" style="color:#6d4c22;">ชั้นปี: 2</p>
+                    <p class="fs-6 mb-0" style="color:#a67c52; font-style:italic;">"Nothing is impossible"</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <style>
-.farmer-theme-card {
-    background: linear-gradient(135deg, #e8f5e9 60%, #fffde7 100%);
-    border: 2px solid #a5d6a7;
-    box-shadow: 0 4px 24px 0 rgba(56, 142, 60, 0.15);
+.western-theme-card {
+    url('https://www.transparenttextures.com/patterns/wood.png');
+    background-size: auto;
+    border: 3px solid #a67c52;
+    box-shadow: 0 4px 24px 0 rgba(101, 67, 33, 0.18);
+}
+.bg-western {
+    background: linear-gradient(90deg, #a67c52 60%, #6d4c22 100%) !important;
 }
 </style>
 {% endblock content %}

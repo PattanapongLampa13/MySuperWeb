@@ -1,31 +1,31 @@
 {% extends "base.html" %}
 
-{% block title %}ติดต่อเรา - เกษตรกร{% endblock title %}
+{% block title %}ติดต่อเรา - สมาคมนายอำเภอ{% endblock title %}
 
 {% block content %}
-<div class="container mt-5">
+<div class="container mt-5" style="font-family: 'Rock Salt', 'Courier New', Courier, monospace;">
     <div class="row justify-content-center">
         <div class="col-md-8 col-lg-6">
-            <div class="card shadow-sm farmer-theme-card">
-                <div class="card-header bg-success text-white">
-                    <h4 class="mb-0">ติดต่อเรา <span style="font-size:1.2em;">🌾</span></h4>
+            <div class="card shadow-sm western-theme-card">
+                <div class="card-header bg-western text-white" style="background: #a67c52; color: #fff8e1; font-family: 'Rock Salt', 'Courier New', Courier, monospace;">
+                    <h4 class="mb-0">ติดต่อเรา (Contact) <span style="font-size:1.2em;"></span></h4>
                 </div>
                 <div class="card-body">
                     <form method="post">
                         {% csrf_token %}
                         <div class="mb-3">
-                            <label for="name" class="form-label" style="color:#388e3c; font-weight:bold;">ชื่อ</label>
-                            <input type="text" class="form-control" id="name" name="name" required style="border:1.5px solid #a5d6a7; background:#f1f8e9;">
+                            <label for="name" class="form-label" style="color:#6d4c23; font-weight:bold;">ชื่อ (Name)</label>
+                            <input type="text" class="form-control" id="name" name="name" required style="border:1.5px solid #e0c097; background:#fff8e1;">
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label" style="color:#388e3c; font-weight:bold;">อีเมล</label>
-                            <input type="email" class="form-control" id="email" name="email" required style="border:1.5px solid #a5d6a7; background:#f1f8e9;">
+                            <label for="email" class="form-label" style="color:#6d4c23; font-weight:bold;">อีเมล (Email)</label>
+                            <input type="email" class="form-control" id="email" name="email" required style="border:1.5px solid #e0c097; background:#fff8e1;">
                         </div>
                         <div class="mb-3">
-                            <label for="message" class="form-label" style="color:#388e3c; font-weight:bold;">ข้อความ</label>
-                            <textarea class="form-control" id="message" name="message" rows="4" required style="border:1.5px solid #a5d6a7; background:#f1f8e9;"></textarea>
+                            <label for="message" class="form-label" style="color:#6d4c23; font-weight:bold;">ข้อความ (Message)</label>
+                            <textarea class="form-control" id="message" name="message" rows="4" required style="border:1.5px solid #e0c097; background:#fff8e1;"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-success w-100" style="background:#388e3c; border:none; font-weight:bold;">ส่งข้อความ</button>
+                        <button type="submit" class="btn btn-western w-100" style="background:#a67c52; border:none; font-weight:bold; color:#fff8e1;">ส่งข้อความ (Send Message)</button>
                     </form>
                 </div>
             </div>
@@ -33,10 +33,26 @@
     </div>
 </div>
 <style>
-.farmer-theme-card {
-    background: linear-gradient(135deg, #e8f5e9 60%, #fffde7 100%);
-    border: 2px solid #a5d6a7;
-    box-shadow: 0 4px 24px 0 rgba(56, 142, 60, 0.15);
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+.western-theme-card {
+    background: #f5ecd7 url('https://www.transparenttextures.com/patterns/old-mathematics.png');
+    border: 6px solid #a67c52;
+    border-radius: 18px;
+    box-shadow: 0 0 40px 10px #a67c52, 0 0 0 8px #fff8e1 inset, 0 0 60px #6d4c23 inset;
+    padding: 2.5rem 2rem;
+    position: relative;
+    filter: drop-shadow(0 0 12px #6d4c23);
+}
+.btn-western {
+    background: #a67c52;
+    color: #fff8e1;
+    font-family: 'Rock Salt', 'Courier New', Courier, monospace;
+    letter-spacing: 0.05em;
+    transition: background 0.2s;
+}
+.btn-western:hover {
+    background: #6d4c23;
+    color: #fff8e1;
 }
 </style>
 {% endblock content %}

@@ -10,17 +10,80 @@
         <meta name="author" content="" />
         <title>{% block title %}{% endblock title %}</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-
-        <link href="{% static "css/styles.css" %}" rel="stylesheet" />
-
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+        <style>
+            body, .navbar, .sb-sidenav, .card, .btn, .form-control, .dropdown-menu, .bg-light {
+                font-family: 'Rock Salt', 'Courier New', Courier, monospace !important;
+            }
+            body.sb-nav-fixed {
+                background: #e0c097 url('https://www.transparenttextures.com/patterns/wood.png');
+                background-size: auto;
+                color: #6d4c23 !important;
+            }
+            .sb-topnav.navbar {
+                background: #a67c52 !important;
+                color: #fff8e1 !important;
+            }
+            .sb-sidenav {
+                background: #e0c097 !important;
+                color: #6d4c23 !important;
+            }
+            .sb-sidenav .nav-link, .sb-sidenav .sb-sidenav-menu-heading {
+                color: #6d4c23 !important;
+            }
+            .sb-sidenav .nav-link.active, .sb-sidenav .nav-link:hover {
+                background: #fff8e1 !important;
+                color: #a67c52 !important;
+            }
+            .sb-sidenav-footer {
+                background: #a67c52 !important;
+                color: #fff8e1 !important;
+            }
+            .navbar-brand {
+                font-weight: bold;
+                letter-spacing: 0.1em;
+                color: #fff8e1 !important;
+            }
+            .btn-primary, .btn-success, .btn {
+                background: #a67c52 !important;
+                color: #fff8e1 !important;
+                border: none !important;
+            }
+            .btn-primary:hover, .btn-success:hover, .btn:hover {
+                background: #6d4c23 !important;
+                color: #fff8e1 !important;
+            }
+            .form-control {
+                background: #fff8e1 !important;
+                border: 1.5px solid #e0c097 !important;
+                color: #6d4c23 !important;
+            }
+            .card {
+                background: #fff8e1 !important;
+                border: 2px solid #a67c52 !important;
+                box-shadow: 0 4px 24px 0 rgba(166, 124, 82, 0.15) !important;
+            }
+            .card-header {
+                background: #a67c52 !important;
+                color: #fff8e1 !important;
+            }
+            .bg-light {
+                background: #e0c097 !important;
+            }
+            footer {
+                background: #a67c52 !important;
+                color: #fff8e1 !important;
+            }
+        </style>
     </head>
-    <body class="sb-nav-fixed" style="background: #a5d6a7; color: #222;">
-        <nav class="sb-topnav navbar navbar-expand" style="background: #388e3c; color: #222;">
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.html">เกษตรกร</a>
+            <a class="navbar-brand ps-3" href="{% url 'home' %}">สมาคมนายอำเภอ (Western)</a>
             <!-- Sidebar Toggle-->
-            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                 <div class="input-group">
@@ -33,30 +96,30 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Settings</a></li>
-                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Activity Log</a></li>
                         <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion" id="sidenavAccordion" style="background: #81c784; color: #222;">
+                <nav class="sb-sidenav accordion" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
                             <a class="nav-link" href="{% url 'home' %}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-hat-cowboy"></i></div>
                                 หน้าแรก
                             </a>
                              <a class="nav-link" href="{% url 'about' %}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-hat-cowboy"></i></div>
                                 เกี่ยวกับเรา
                             </a>
                              <a class="nav-link" href="{% url 'contact' %}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-hat-cowboy"></i></div>
                                 ติดต่อเรา
                             </a>
                             {% comment %} <div class="sb-sidenav-menu-heading">Interface</div>
@@ -115,7 +178,7 @@
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
-                        เกษตรกรรุ่นใหม่
+                        นายอำเภอผู้ไม่ยอมแพ้
                     </div>
                 </nav>
             </div>
@@ -129,7 +192,7 @@
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                            <div class="text-muted">Copyright &copy; Western Town 2025</div>
                             <div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;
